@@ -21,7 +21,6 @@ The first objective during any remote investigation is establishing the current 
 analyst@524cb0bc3715:~$ pwd
 /home/analyst
 ```
-[cite: 6]
 
 ### 2. Navigating to Compliance Reports
 The investigation required navigating into the reports directory to locate specific subdirectories containing user data. I verified the path change and listed the contents to find the `users` directory.
@@ -32,7 +31,6 @@ analyst@524cb0bc3715:~/reports$ pwd
 analyst@524cb0bc3715:~/reports$ ls
 users
 ```
-[cite: 6]
 
 ### 3. Auditing User Access Controls
 To verify recently added users for compliance auditing, I navigated to the `users` subdirectory and read the contents of the newly generated text file[cite: 6]. This allowed me to extract specific employee identifiers and department assignments (e.g., verifying user `mreed` in Information Technology and `aezra` in Human Resources)[cite: 6].
@@ -49,7 +47,6 @@ employee_id  username  department
 1177         aezra     Human Resources
 1188         noshiro   Finance
 ```
-[cite: 6]
 
 ### 4. Comprehensive Server Log Analysis
 Finally, I returned to the home directory and navigated into the server logs directory[cite: 6]. To investigate recent system events, I utilized the `cat` command to output the entirety of `server_logs.txt`, revealing a sequence of unauthorized access attempts, incorrect passwords, and storage capacity warnings[cite: 6].
@@ -78,7 +75,6 @@ analyst@524cb0bc3715:~/logs$ cat server_logs.txt
 2022-09-29 16:56:22 error   Unauthorized access
 2022-09-29 16:56:48 warning The current user's password expires in 15 days
 ```
-[cite: 6]
 
 ---
 
